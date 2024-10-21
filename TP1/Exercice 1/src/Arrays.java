@@ -49,4 +49,15 @@ public class Arrays {
 		System.out.println("the max : "+max);
 	}
 
+	public static int studentWithDegree(float array[], float degree) {
+		int count = 0;
+
+		for (int i=0; i<array.length;i++) {
+			if (array[i]==degree){
+				count++;
+			}
+		}
+		return count;
+	}
+
 }

@@ -26,4 +26,4 @@ jobs:
         run: javac "TP1/Exercice 1/src/Arrays.java" "TP1/Exercice 1/src/MyClass.java"
 
       - name: Run Java program
-        run: echo -e "10.0\n3.0\n14.6\n13.0\n18.9" | java -cp "TP1/Exercice 1/src" MyClass
+        run: echo -e "10.0\n3.0\n14.6\n10.0\n18.9" | java -cp "TP1/Exercice 1/src" MyClass
