@@ -31,6 +31,10 @@ public class MyClass {
 		System.out.print(Arrays.average(notes));
 		System.out.println();
 
+		System.out.println("showing Min & Max of degrees : ");
+		Arrays.minmax(notes);
+		System.out.println();
+
 	}
 
 }

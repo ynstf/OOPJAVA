@@ -33,4 +33,20 @@ public class Arrays {
 		return totale/array.length;
 	}
 
+	public static void minmax(float array[]) {
+		float min = 20;
+		float max = 0;
+
+		for (int i=0; i<array.length;i++) {
+			if (array[i]<=min){
+				min = array[i];
+			}
+			if (array[i]>=max){
+				max = array[i];
+			}
+		}
+		System.out.println("the min : "+min);
+		System.out.println("the max : "+max);
+	}
+
 }
