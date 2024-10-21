@@ -14,7 +14,7 @@ public class MyClass {
 			notes[i] = t;
 		}
 		System.out.println();
-		
+
 		System.out.println("showing degrees : ");
 		Arrays.show(notes);
 		System.out.println();
@@ -25,6 +25,10 @@ public class MyClass {
 
 		System.out.println("showing sorted degrees : ");
 		Arrays.show(notes);
+		System.out.println();
+
+		System.out.println("showing average of degrees : ");
+		System.out.print(Arrays.average(notes));
 		System.out.println();
 
 	}
