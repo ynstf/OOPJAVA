@@ -23,7 +23,7 @@ jobs:
           java-version: "17"
 
       - name: Compile Java code
-        run: javac "OOPJAVA/TP1/Exercice 1/src/Arrays.java" "OOPJAVA/TP1/Exercice 1/src/MyClass.java"
+        run: javac "TP1/Exercice 1/src/Arrays.java" "TP1/Exercice 1/src/MyClass.java"
 
       - name: Run Java program
-        run: java -cp "OOPJAVA/TP1/Exercice 1/src" MyClass
+        run: java -cp "TP1/Exercice 1/src" MyClass
