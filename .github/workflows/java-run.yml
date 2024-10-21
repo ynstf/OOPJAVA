@@ -1,0 +1,29 @@
+name: Java CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: "temurin"
+          java-version: "17"
+
+      - name: Compile Java code
+        run: javac "OOPJAVA/TP1/Exercice 1/src/Arrays.java" "OOPJAVA/TP1/Exercice 1/src/MyClass.java"
+
+      - name: Run Java program
+        run: java -cp "OOPJAVA/TP1/Exercice 1/src" MyClass
