@@ -1,5 +1,4 @@
-name: Java CI
-
+name: Java CI Exercie 2
 on:
   push:
     branches:
@@ -23,7 +22,7 @@ jobs:
           java-version: "17"
 
       - name: Compile Java code
-        run: javac "TP1/Exercice 1/src/Arrays.java" "TP1/Exercice 1/src/MyClass.java"
+        run: javac "TP1/Exercice 2/src/Verbe.java" "TP1/Exercice 2/src/MyClass.java"
 
       - name: Run Java program
-        run: echo -e "10.0\n3.0\n14.6\n10.0\n18.9" | java -cp "TP1/Exercice 1/src" MyClass
+        run: echo -e "MANGER" | java -cp "TP1/Exercice 2/src" MyClass
