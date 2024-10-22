@@ -25,4 +25,4 @@ jobs:
         run: javac "TP1/Exercice 3/src/Str.java" "TP1/Exercice 3/src/MyClass.java"
 
       - name: Run Java program for input
-        run: echo -e "1\nyouness atif\n \n2\n \n3\n \n4\n \n5" | java -cp "TP1/Exercice 3/src" MyClass
+        run: echo -e "1\n youness atif \n0 \n5" | java -cp "TP1/Exercice 3/src" MyClass
