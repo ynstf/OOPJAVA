@@ -23,7 +23,7 @@ public class MyClass {
             System.out.println("5. Quitter");
             System.out.print("Choisissez une option: ");
             choice = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline character
+            scanner.nextLine(); 
 
             switch (choice) {
                 case 1:
@@ -47,7 +47,7 @@ public class MyClass {
 
             if (choice != 5) {
                 System.out.print("Frappez une touche pour revenir au menu...");
-                scanner.nextLine(); // Wait for user to press a key
+                scanner.nextLine();
             }
 
         } while (choice != 5);
