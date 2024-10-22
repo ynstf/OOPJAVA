@@ -21,7 +21,7 @@ public class Verbe {
     }
 
     public static void generateConj(String verbRoot) {
-        // dabject & endings for present
+        // subject & endings for present
         String[] subjects = {"je", "tu", "il/elle", "nous", "vous", "ils/elles"};
         String[] endings = {"e", "es", "e", "ons", "ez", "ent"};
         

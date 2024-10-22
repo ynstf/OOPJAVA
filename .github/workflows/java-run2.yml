@@ -22,7 +22,7 @@ jobs:
           java-version: "17"
 
       - name: Compile Java code
-        run: javac "TP1/Exercice 2/src/Verbe.java" "TP1/Exercice 2/src/MyClass.java"
+        run: javac "TP1/Exercice 2/src/Verbe.java" "TP1/Exercice 2/src/MyClass.java" "TP1/Exercice 2/src/Result.java"
 
       - name: Run Java program
         run: echo -e "CHANTER" | java -cp "TP1/Exercice 2/src" MyClass
