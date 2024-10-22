@@ -1,19 +1,9 @@
 import java.util.Scanner;
-
 public class MyClass {
-
 	public static void main(String[] args) {
-
 		Str content = new Str();
 		Scanner scanner = new Scanner(System.in);
-
-		/*content.input();
-		content.show();
-		content.reverse();
-		content.countWords();*/
-
 		int choice;
-
         do {
             System.out.println("\nMenu:");
             System.out.println("1. Saisir une chaîne de caractères");
@@ -24,7 +14,6 @@ public class MyClass {
             System.out.print("Choisissez une option: ");
             choice = scanner.nextInt();
             scanner.nextLine(); 
-
             switch (choice) {
                 case 1:
                     content.input();
@@ -44,16 +33,11 @@ public class MyClass {
                 default:
                     System.out.println("Option invalide. Veuillez réessayer.");
             }
-
             if (choice != 5) {
                 System.out.print("Frappez une touche pour revenir au menu...");
                 scanner.nextLine();
             }
-
         } while (choice != 5);
-
-
-
 
 	}
 
