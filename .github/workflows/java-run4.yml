@@ -1,4 +1,4 @@
-name: Java CI Exercie 3
+name: Java CI Exercie 4
 on:
   push:
     branches:
@@ -22,7 +22,7 @@ jobs:
           java-version: "17"
 
       - name: Compile Java code
-        run: javac "TP1/Exercice 3/src/Counter.java" "TP1/Exercice 3/src/MyClass.java"
+        run: javac "TP1/Exercice 4/src/Counter.java" "TP1/Exercice 4/src/MyClass.java"
 
       - name: Run Java program for Test
-        run: echo -e "Écrivez un programme java qui lit une chaîne de caractères ch au clavier et qui compte les occurrences des lettres de l'alphabet en ne distinguant pas les majuscules et les minuscules.\nÉcrivez un programme java qui lit une chaîne de caractères ch au clavier et qui" | java -cp "TP1/Exercice 3/src" MyClass
+        run: echo -e "Écrivez un programme java qui lit une chaîne de caractères ch au clavier et qui compte les occurrences des lettres de l'alphabet en ne distinguant pas les majuscules et les minuscules.\nÉcrivez un programme java qui lit une chaîne de caractères ch au clavier et qui" | java -cp "TP1/Exercice 4/src" MyClass
