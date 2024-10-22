@@ -22,7 +22,7 @@ jobs:
           java-version: "17"
 
       - name: Compile Java code
-        run: javac "TP1/Exercice 3/src/Str.java" "TP1/Exercice 3/src/MyClass.java"
+        run: javac "TP1/Exercice 3/src/Str.java" "TP1/Exercice 3/src/MyClass.java" "TP1/Exercice 3/src/Test.java"
 
-      - name: Run Java program for input
-        run: echo -e "1\n youness atif \n0 \n5" | java -cp "TP1/Exercice 3/src" MyClass
+      - name: Run Java program for Test
+        run: echo -e "youness atif" | java -cp "TP1/Exercice 3/src" Test
