@@ -25,4 +25,4 @@ jobs:
         run: javac "TP1/Exercice 2/src/Verbe.java" "TP1/Exercice 2/src/MyClass.java"
 
       - name: Run Java program
-        run: echo -e "MANGER" | java -cp "TP1/Exercice 2/src" MyClass
+        run: echo -e "CHANTER" | java -cp "TP1/Exercice 2/src" MyClass
