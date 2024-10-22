@@ -1,0 +1,28 @@
+name: Java CI Exercie 3
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: "temurin"
+          java-version: "17"
+
+      - name: Compile Java code
+        run: javac "TP1/Exercice 3/src/Verbe.java" "TP1/Exercice 3/src/MyClass.java"
+
+      - name: Run Java program for input
+        run: echo -e "1\nyouness atif\n \n2\n \n3\n \n4\n \n5" | java -cp "TP1/Exercice 3/src" MyClass
