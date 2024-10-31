@@ -1,0 +1,42 @@
+name: Java CI TP1
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: "temurin"
+          java-version: "17"
+
+      - name: Compile Java code EX1
+        run: javac "TP1/Exercice 1/src/Arrays.java" "TP1/Exercice 1/src/MyClass.java"
+      - name: Run Java program EX1
+        run: echo -e "10.0\n3.0\n14.6\n10.0\n18.9" | java -cp "TP1/Exercice 1/src" MyClass
+
+      - name: Compile Java code EX2
+        run: javac "TP1/Exercice 2/src/Verbe.java" "TP1/Exercice 2/src/MyClass.java" "TP1/Exercice 2/src/Result.java"
+      - name: Run Java program EX2
+        run: echo -e "CHANTER" | java -cp "TP1/Exercice 2/src" MyClass
+
+      - name: Compile Java code EX3
+        run: javac "TP1/Exercice 3/src/Str.java" "TP1/Exercice 3/src/MyClass.java" "TP1/Exercice 3/src/Test.java"
+      - name: Run Java program for Test EX3
+        run: echo -e "youness atif" | java -cp "TP1/Exercice 3/src" Test
+
+      - name: Compile Java code EX4
+        run: javac "TP1/Exercice 4/src/Counter.java" "TP1/Exercice 4/src/MyClass.java"
+      - name: Run Java program for Test EX4
+        run: echo -e "Écrivez un programme java qui lit une chaîne de caractères ch au clavier et qui compte les occurrences des lettres de l'alphabet en ne distinguant pas les majuscules et les minuscules.\nÉcrivez un programme java qui lit une chaîne de caractères ch au clavier et qui" | java -cp "TP1/Exercice 4/src" MyClass

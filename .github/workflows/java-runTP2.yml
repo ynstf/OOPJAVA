@@ -1,4 +1,4 @@
-name: Java CI TP2 Exercie 1
+name: Java CI TP2
 on:
   push:
     branches:
@@ -21,8 +21,7 @@ jobs:
           distribution: "temurin"
           java-version: "17"
 
-      - name: Compile Java code
+      - name: Compile Java code EX1
         run: javac "TP2/Exercice 1/src/Application.java" "TP2/Exercice 1/src/Personne.java" "TP2/Exercice 1/src/Adherent.java"
-
-      - name: Run Java program
+      - name: Run Java program EX1
         run: java -cp "TP2/Exercice 1/src" Application
