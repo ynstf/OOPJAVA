@@ -1,0 +1,28 @@
+name: Java CI TP2 Exercie 1
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: "temurin"
+          java-version: "17"
+
+      - name: Compile Java code
+        run: javac "TP2/Exercice 1/src/Application.java" "TP2/Exercice 1/src/Personne.java" "TP2/Exercice 1/src/Adherent.java"
+
+      - name: Run Java program
+        run: java -cp "TP2/Exercice 1/src" Application
