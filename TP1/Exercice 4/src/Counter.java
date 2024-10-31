@@ -2,7 +2,6 @@ public class Counter {
 
 	public static void calculate(String ch) {
 
-
 		// table to store the number of occurrences of the 26 letters of the alphabet
         int[] nb_occurrences = new int[26];
         ch = ch.toUpperCase();
@@ -24,7 +23,5 @@ public class Counter {
                 System.out.println(nb_occurrences[i] + " fois la lettre '" + lettre + "'");
             }
         }
-	
-	
 	}
 }

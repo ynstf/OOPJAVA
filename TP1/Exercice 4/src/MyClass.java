@@ -7,6 +7,7 @@ public class MyClass {
 
 		Scanner scanner = new Scanner(System.in);
 		String ch;
+		
 		do {
         System.out.print("Entrez une ligne de texte (max. 100 caractères) :");
         ch = scanner.nextLine();
