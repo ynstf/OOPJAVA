@@ -7,10 +7,16 @@ public class Application {
 		System.out.println("Informations de l'Adherent:");
         adherent.afficher();
 
-		//affichage des informations de l auteur
+		System.out.println();
+
+
+		//création de l auteur
         Auteur auteur = new Auteur("Martin", "Paul", "paul.martin@example.com", "0698765432", 45, 2001);
-        System.out.println("Informations de l'Auteur:");
-        auteur.afficher();
+
+		//création et l affichage d'un livre écrit par l'auteur
+        Livre livre = new Livre(123456, "clean code", auteur);
+		System.out.println("Informations de livre:");
+        livre.afficher();
 
 	}
 
