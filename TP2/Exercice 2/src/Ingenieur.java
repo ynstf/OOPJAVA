@@ -1,11 +1,19 @@
 class Ingenieur extends Employe {
 
-    public Ingenieur(String nom,String prenom,String email,String telephone,double salaire) {
+    private String specialite;
+
+    public Ingenieur(String nom,String prenom,String email,String telephone,double salaire,String specialite) {
         super(nom, prenom, email, telephone, salaire);
+        this.specialite = specialite;
+    }
+    public String getSpecialite(){
+        return specialite;
     }
 
     @Override
     public double calculerSalire() {
-        return super.calculerSalire();
+
+        return super.calculerSalire() + (super.calculerSalire() * 0.15);
+
     }
 }

@@ -27,6 +27,6 @@ jobs:
         run: java -cp "TP2/Exercice 1/src" Application
 
       - name: Compile Java code EX2
-        run: javac "TP2/Exercice 2/src/Application.java" "TP2/Exercice 2/src/Employe.java" "TP2/Exercice 2/src/Ingenieur.java"
+        run: javac "TP2/Exercice 2/src/Application.java" "TP2/Exercice 2/src/Employe.java" "TP2/Exercice 2/src/Ingenieur.java" "TP2/Exercice 2/src/Manager.java"
       - name: Run Java program EX2
         run: java -cp "TP2/Exercice 2/src" Application

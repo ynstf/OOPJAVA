@@ -13,6 +13,14 @@ abstract class Employe{
     this.salaire = salaire;
     }
 
+    public String getNom(){
+        return nom;
+    }
+    public String getPrenom(){
+        return prenom;
+    }
+
+
     public double calculerSalire(){
         return salaire;
     }
