@@ -30,3 +30,8 @@ jobs:
         run: javac "TP2/Exercice 2/src/Application.java" "TP2/Exercice 2/src/Employe.java" "TP2/Exercice 2/src/Ingenieur.java" "TP2/Exercice 2/src/Manager.java"
       - name: Run Java program EX2
         run: java -cp "TP2/Exercice 2/src" Application
+
+      - name: Compile Java code EX3
+        run: javac "TP2/Exercice 3/src/Application.java" "TP2/Exercice 3/src/Categorie.java" "TP2/Exercice 3/src/Client.java" "TP2/Exercice 3/src/Commande.java" "TP2/Exercice 3/src/LigneCommande.java" "TP2/Exercice 3/src/Ordinateur.java"
+      - name: Run Java program EX3
+        run: java -cp "TP2/Exercice 3/src" Application
