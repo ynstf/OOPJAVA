@@ -1,0 +1,27 @@
+name: Java CI TP3
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: "temurin"
+          java-version: "17"
+
+      - name: Compile Java code EX1
+        run: javac "TP3/Exercice 1/src/Application.java" "TP3/Exercice 1/src/TropViteException.java" "TP3/Exercice 1/src/Vehicule.java"
+      - name: Run Java program EX1
+        run: java -cp "TP3/Exercice 1/src" Application
