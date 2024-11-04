@@ -25,3 +25,8 @@ jobs:
         run: javac "TP3/Exercice 1/src/Application.java" "TP3/Exercice 1/src/TropViteException.java" "TP3/Exercice 1/src/Vehicule.java"
       - name: Run Java program EX1
         run: java -cp "TP3/Exercice 1/src" Application
+
+      - name: Compile Java code EX2
+        run: javac "TP3/Exercice 2/src/Calculateur.java" "TP3/Exercice 2/src/RacineCarreeException.java"
+      - name: Run Java program EX2
+        run: java -cp "TP3/Exercice 2/src" Calculateur
