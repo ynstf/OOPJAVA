@@ -32,11 +32,11 @@
    }
    ```
 
-3. **Méthode `main` dans `Vehicule`** :
+3. **Méthode `main` dans `Application`** :
    - Teste `testVitesse()` avec des valeurs inférieures et supérieures à 90 pour gérer et afficher la pile d'appel.
 
    ```java
-   public class Vehicule {
+   class Application {
        public static void main(String[] args) {
            Vehicule vehicule = new Vehicule();
            try {
