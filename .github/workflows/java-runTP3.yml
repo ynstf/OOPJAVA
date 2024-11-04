@@ -30,3 +30,8 @@ jobs:
         run: javac "TP3/Exercice 2/src/Calculateur.java" "TP3/Exercice 2/src/RacineCarreeException.java"
       - name: Run Java program EX2
         run: java -cp "TP3/Exercice 2/src" Calculateur
+
+      - name: Compile Java code EX3
+        run: javac "TP3/Exercice 3/src/Evaluateur.java" "TP3/Exercice 3/src/NoteInvalideException.java"
+      - name: Run Java program EX3
+        run: java -cp "TP3/Exercice 3/src" Evaluateur
