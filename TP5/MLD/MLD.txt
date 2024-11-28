@@ -1,0 +1,2 @@
+PROFESSEUR: (id_prof), nom, prenom, cin, adresse, telephone, email, date_recrutement, id_deprat*
+DEPARTEMENT: (id_deprat), nom
