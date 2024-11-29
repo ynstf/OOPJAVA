@@ -1,6 +1,7 @@
-package com.example.tp5.models;
+package com.example.tp5.database;
 
-import com.example.tp5.database.SingletonConnexionDB;
+import com.example.tp5.models.Departement;
+import com.example.tp5.models.Professeur;
 import com.example.tp5.services.IMetier;
 
 import java.sql.*;
