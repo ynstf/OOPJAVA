@@ -10,7 +10,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Main.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/tp5/fxml/Main.fxml"));
             Scene scene = new Scene(loader.load());
             primaryStage.setTitle("Main Application");
             primaryStage.setScene(scene);

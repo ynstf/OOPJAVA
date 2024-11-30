@@ -1,4 +1,4 @@
-package com.example.tp5;
+package com.example.tp5.controllers;
 
 import com.example.tp5.models.Departement;
 import com.example.tp5.services.IMetier;

@@ -4,19 +4,24 @@
 <?import javafx.scene.control.*?>
 
 <?import javafx.geometry.Insets?>
-<DialogPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tp5.UpdateDepartmentDialogController">
+<DialogPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tp5.controllers.AddDepartmentDialogController">
     <content>
+        <!-- VBox for content area -->
         <VBox spacing="10.0">
             <padding>
                 <Insets top="10" right="10" bottom="10" left="10"/>
             </padding>
-            <Label text="Update Department Name:" />
+            <Label text="Enter Department Name:" />
             <TextField fx:id="txtDepartmentName" promptText="Enter department name" />
             <HBox spacing="10">
-                <Button text="Update" onAction="#handleUpdate" />
+                <Button fx:id="btnAdd" text="Add" onAction="#handleAdd" />
                 <Button text="Cancel" onAction="#handleCancel" />
             </HBox>
         </VBox>
+
     </content>
+
+
+
 
 </DialogPane>

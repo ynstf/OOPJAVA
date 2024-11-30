@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 
 <?import javafx.geometry.Insets?>
-<DialogPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tp5.AddProfessorDialogController">
+<DialogPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tp5.controllers.AddProfessorDialogController">
     <content>
         <!-- VBox for content area -->
         <VBox spacing="10.0">

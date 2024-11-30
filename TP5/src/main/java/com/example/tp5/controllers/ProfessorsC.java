@@ -1,6 +1,5 @@
-package com.example.tp5;
+package com.example.tp5.controllers;
 
-import com.example.tp5.models.Departement;
 import com.example.tp5.models.Professeur;
 import com.example.tp5.services.IMetier;
 import com.example.tp5.services.MetierImpl;
@@ -83,7 +82,7 @@ public class ProfessorsC {
     public void handleAdd() {
         try {
             // Load the AddDepartmentDialog.fxml
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("ProfComposants/AddProfessorDialog.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/tp5/fxml/ProfComposants/AddProfessorDialog.fxml"));
             Scene dialogScene = new Scene(loader.load());
 
             // Create a new Stage (popup)
@@ -113,7 +112,7 @@ public class ProfessorsC {
             // Open the Update window and pre-fill the form
             try {
                 // Load the update dialog FXML
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("ProfComposants/UpdateProfessorDialog.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/tp5/fxml/ProfComposants/UpdateProfessorDialog.fxml"));
                 Parent root = loader.load();
 
                 // Get the controller of the dialog and set the selected department data
