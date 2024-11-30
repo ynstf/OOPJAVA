@@ -1,33 +1,45 @@
 package com.example.tp5.models;
 
+import javafx.beans.property.*;
+
 public class Departement {
-    private int idDeprat;
-    private String nom;
+
+    private IntegerProperty idDeprat;
+    private StringProperty nom;
 
     // Constructor
     public Departement(int idDeprat, String nom) {
-        this.idDeprat = idDeprat;
-        this.nom = nom;
+        this.idDeprat = new SimpleIntegerProperty(idDeprat);
+        this.nom = new SimpleStringProperty(nom);
     }
 
-    // Default Constructor
-    public Departement() {}
+    public Departement() {
+
+    }
 
     // Getters and Setters
     public int getIdDeprat() {
-        return idDeprat;
+        return idDeprat.get();
     }
 
     public void setIdDeprat(int idDeprat) {
-        this.idDeprat = idDeprat;
+        this.idDeprat.set(idDeprat);
+    }
+
+    public IntegerProperty idDepratProperty() {
+        return idDeprat;
     }
 
     public String getNom() {
-        return nom;
+        return nom.get();
     }
 
     public void setNom(String nom) {
-        this.nom = nom;
+        this.nom.set(nom);
+    }
+
+    public StringProperty nomProperty() {
+        return nom;
     }
 
     @Override
@@ -37,4 +49,7 @@ public class Departement {
                 ", nom='" + nom + '\'' +
                 '}';
     }
+
+
+
 }

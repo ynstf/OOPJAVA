@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tp5.MainC">
+    <children>
+        <TabPane>
+            <tabs>
+                <Tab text="Professors">
+                    <fx:include source="ProfessorsView.fxml" />
+                    <content>
+                        <VBox fx:id="professorsTabContent" />
+                    </content>
+                </Tab>
+                <Tab text="Departement">
+                    <fx:include source="DepartementsView.fxml" />
+                    <content>
+                        <VBox fx:id="departementsTabContent"  />
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</VBox>

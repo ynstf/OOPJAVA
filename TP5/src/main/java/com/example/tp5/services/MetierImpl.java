@@ -1,14 +1,19 @@
-package com.example.tp5.database;
+package com.example.tp5.services;
 
+import com.example.tp5.database.SingletonConnexionDB;
 import com.example.tp5.models.Departement;
 import com.example.tp5.models.Professeur;
-import com.example.tp5.services.IMetier;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MetierImpl implements IMetier {
+    private Connection conn;
+
+    public MetierImpl() {
+        conn = SingletonConnexionDB.getConnexion();  // Assuming SingletonConnexionDB is correctly set up
+    }
 
     // ********** Methods for Managing Professors **********
 
@@ -39,6 +44,28 @@ public class MetierImpl implements IMetier {
             e.printStackTrace();
         }
         return professeurs;
+    }
+
+    // New method to search departments
+    @Override
+    public List<Departement> searchDepartments(String keyword) {
+        List<Departement> departements = new ArrayList<>();
+        String query = "SELECT * FROM departement WHERE nom LIKE ?";
+        try (Connection conn = SingletonConnexionDB.getConnexion();
+             PreparedStatement pstmt = conn.prepareStatement(query)) {
+            pstmt.setString(1, "%" + keyword + "%");  // Use keyword for searching
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                Departement dept = new Departement(
+                        rs.getInt("id_deprat"),
+                        rs.getString("nom")
+                );
+                departements.add(dept);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return departements;
     }
 
     @Override

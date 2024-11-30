@@ -21,5 +21,6 @@ public interface IMetier {
     void addDepartement(Departement dept);  // Add a new department
     void updateDepartement(Departement dept); // Update an existing department
     void deleteDepartement(int id);          // Delete a department by their ID
+    List<Departement> searchDepartments(String keyword);
     List<Professeur> getProfesseursByDepartement(int idDepartement); // Get all professors in a department
 }
