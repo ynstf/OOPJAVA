@@ -251,3 +251,138 @@ The project follows a clear separation of concerns:
 - DossierContact: Handles all file operations
 - Main: Manages user interaction
 - Each contact stored in individual files for easy management
+
+## Exercise 3: Product and Client Management System
+
+In this exercise, we developed a Java application for managing products and clients with file-based persistence using serialization. The system is split into two separate applications: one for product management and another for client management.
+
+### Features
+
+#### 1. Product Management Application
+- View all products
+- Search products by name
+- Add new products with details (name, brand, price, description, stock)
+- Delete products by name
+- Save products to file (produits.dat)
+
+#### 2. Client Management Application
+- View all clients
+- Search clients by name
+- Add new clients with details (name, surname, address, phone, email)
+- Delete clients by name
+- Save clients to file (clients.dat)
+
+### Architecture
+
+1. **Entity Layer**
+   ```java
+   // Product entity
+   public class Produit implements Serializable {
+       private String nom;
+       private String marque;
+       private double prix;
+       private String description;
+       private int nombreEnStock;
+   }
+
+   // Client entity
+   public class Client implements Serializable {
+       private String nom;
+       private String prenom;
+       private String adresse;
+       private String tel;
+       private String email;
+   }
+   ```
+
+2. **Data Access Layer**
+   ```java
+   // Generic interface for CRUD operations
+   public interface IMetier<T> {
+       void add(T o);
+       List<T> getAll();
+       T findByNom(String nom);
+       void delete(String nom);
+       void saveAll();
+   }
+
+   // Implementations for Product and Client
+   public class MetierProduitImpl implements IMetier<Produit> { ... }
+   public class MetierClientImpl implements IMetier<Client> { ... }
+   ```
+
+3. **Application Layer**
+   ```java
+   // Separate applications for Products and Clients
+   public class ApplicationProduit { ... }
+   public class ApplicationClient { ... }
+   ```
+
+### Technical Features
+
+1. **Serialization**
+   - Objects are serialized to binary files
+   - Automatic file creation if not exists
+   - Data persistence between sessions
+
+2. **Generic Programming**
+   - Generic interface for data operations
+   - Type-safe implementations
+
+3. **File Management**
+   - Automatic directory creation
+   - Binary file handling
+   - Error handling for file operations
+
+4. **User Interface**
+   - Menu-driven console interface
+   - Input validation
+   - Clear feedback messages
+
+### How to Run
+
+1. **Compile the Applications**
+   ```bash
+   javac application/ApplicationProduit.java
+   javac application/ApplicationClient.java
+   ```
+
+2. **Run Product Management**
+   ```bash
+   java application.ApplicationProduit
+   ```
+
+3. **Run Client Management**
+   ```bash
+   java application.ApplicationClient
+   ```
+
+### What I Learned
+- Implementation of serialization in Java
+- Generic interface design
+- File-based persistence
+- Separation of concerns (entities, DAO, application)
+- Menu-driven console application design
+- Error handling and user input validation
+
+### Key Java Concepts Used
+1. **Object-Oriented Programming**
+   - Inheritance
+   - Interfaces
+   - Encapsulation
+
+2. **Generics**
+   - Generic interfaces
+   - Type-safe implementations
+
+3. **File I/O**
+   - Binary file handling
+   - Serialization/Deserialization
+
+4. **Collections**
+   - List interface
+   - ArrayList implementation
+
+5. **Exception Handling**
+   - Try-catch blocks
+   - Custom error messages
