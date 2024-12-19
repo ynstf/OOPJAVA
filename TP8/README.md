@@ -1,4 +1,4 @@
-# README
+# Sockets
 
 ## Overview
 This project includes two Java-based client-server applications demonstrating the use of sockets for communication. Each exercise showcases different functionalities:
